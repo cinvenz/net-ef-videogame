@@ -48,4 +48,11 @@ using (VideoGameContext db = new VideoGameContext())
     }
     Console.WriteLine("Nome SoftwareHouse: " + softwareHouse.Name);
 
+    Console.WriteLine($"Videogiochi prodotti da {softwareHouse.Name}:");
+    foreach (Videogame videogame in  softwareHouse.Videogame)
+    {
+        Console.WriteLine(videogame.Name);
+    }
+
 }
+
